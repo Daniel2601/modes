@@ -1,19 +1,11 @@
-/*
- * @name Pointillism
- * @description By Dan Shiffman. Mouse horizontal location controls size of
- * dots. Creates a simple pointillist effect using ellipses colored according
- * to pixels in an image.
- * <p><em><span class="small"> To run this example locally, you will need an
- * image file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">
- * local server</a>.</span></em></p>
- */
 let img;
 n = 1;
 
 function setup() {
   n = 110;
-  img = loadImage('export2/Stack0'+n+'.png');
-  createCanvas(300, 500);
+  //img = loadImage('export2/Stack0'+n+'.png');
+  createCanvas(500, 500);
+    background(100);
   textSize(16);
   b1 = createButton('Suivant');
   b1.position(150, 150);
@@ -26,19 +18,19 @@ function setup() {
 }
 
 function draw() {
-    image(img, 50, 50);
+    //image(img, 50, 50);
     text("img:"+n, 75, 250);
 }
 
 
 function addN() {
   n = n + 1;
-  img = loadImage('export2/Stack0'+n+'.png');
+  //img = loadImage('export2/Stack0'+n+'.png');
   background(255);
 }
 
 function subN() {
   n = n - 1;
-  img = loadImage('export2/Stack0'+n+'.png');
+  //img = loadImage('export2/Stack0'+n+'.png');
   background(255);
 }
