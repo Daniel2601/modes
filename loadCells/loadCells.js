@@ -19,7 +19,7 @@ function setup() {
 
 function draw() {
     image(img, 50, 100);
-    text("img:"+n, 75, 100);
+    text("img:"+n, 75, 20);
 }
 
 
