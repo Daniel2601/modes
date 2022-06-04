@@ -8,21 +8,37 @@
  * local server</a>.</span></em></p>
  */
 let img;
-let smallPoint, largePoint;
+n = 1;
 
 function setup() {
   n = 110;
   img = loadImage('export2/Stack0'+n+'.png');
-  createCanvas(300, 300);
+  createCanvas(300, 500);
+  textSize(16);
+  b1 = createButton('Suivant');
+  b1.position(150, 150);
+  b1.mousePressed(addN);
+  b2 = createButton('Précédent');
+  b2.position(0, 150);
+  b2.mousePressed(subN);
+
   //imageMode(CENTER);
 }
 
 function draw() {
-    image(img, 0, 0);
+    image(img, 50, 50);
+    text("img:"+n, 75, 250);
 }
 
-function mousePressed() {
+
+function addN() {
   n = n + 1;
-  if (n > 207) n = 110;
   img = loadImage('export2/Stack0'+n+'.png');
+  background(255);
+}
+
+function subN() {
+  n = n - 1;
+  img = loadImage('export2/Stack0'+n+'.png');
+  background(255);
 }
